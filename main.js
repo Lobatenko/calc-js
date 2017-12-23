@@ -6,9 +6,9 @@ function plus(){
     var num1, num2, res;
 
     num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
+    num2 = parseFloat(num2);
 
     res = num1 + num2;
     document.getElementById('out').innerHTML = res;
@@ -18,9 +18,9 @@ function minus(){
     var num1, num2, res;
 
     num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
+    num2 = parseFloat(num2);
 
     res = num1 - num2;
     document.getElementById('out').innerHTML = res;
@@ -30,9 +30,9 @@ function multiply(){
     var num1, num2, res;
 
     num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
+    num2 = parseFloat(num2);
 
     res = num1 * num2;
     document.getElementById('out').innerHTML = res;
@@ -42,17 +42,28 @@ function division(){
     var num1, num2, res;
 
     num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-
-    res = num1 / num2;
+    num2 = parseFloat(num2);
 
     if (num2 == 0){
         alert("You can not divide by zero!");
+    } else{
+        res = num1 / num2;
     }
 
     document.getElementById('out').innerHTML = res;
 
 
+}
+function testKey(e){
+    // Make sure to use event.charCode if available
+    var key = (typeof e.charCode == 'undefined' ? e.keyCode : e.charCode);
+
+    // Ignore special keys
+    if (e.ctrlKey || e.altKey || key < 32)
+        return true;
+
+    key = String.fromCharCode(key);
+    return /[\d\.]/.test(key);
 }
