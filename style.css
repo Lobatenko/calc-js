@@ -1,0 +1,31 @@
+body{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+h1{
+    text-align: center;
+}
+.action{
+    max-width: 225px;
+    margin: 0 auto;
+    border: 1px solid #777;
+}
+input[type = text]{
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.plus{
+    margin-left: 33px;
+    margin-top: 20px
+}
+button{
+    margin: 8px;
+    font-size: 20px;
+}
+hr{
+    max-width: 150px;
+}
+p{
+    text-align: center
+}
