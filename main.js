@@ -56,14 +56,22 @@ function division(){
 
 
 }
-function testKey(e){
-    // Make sure to use event.charCode if available
-    var key = (typeof e.charCode == 'undefined' ? e.keyCode : e.charCode);
+//function testKey(e){
+//    // Make sure to use event.charCode if available
+//    var key = (typeof e.charCode == 'undefined' ? e.keyCode : e.charCode);
+//
+//    // Ignore special keys
+//    if (e.ctrlKey || e.altKey || key < 32)
+//        return true;
+//
+//    if (e.ctrlKey && e.charCode == 118) return false;
+//
+//            var num1 = document.getElementById('n1').value;
+//            num1.oncontextmenu = function(){return false}
+//            var num2 = document.getElementById('n2').value;
+//            num2.oncontextmenu = function(){return false}
+//
+//    key = String.fromCharCode(key);
+//    return /[\d\.]/.test(key);
+//}
 
-    // Ignore special keys
-    if (e.ctrlKey || e.altKey || key < 32)
-        return true;
-
-    key = String.fromCharCode(key);
-    return /[\d\.]/.test(key);
-}
